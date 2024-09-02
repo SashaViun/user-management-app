@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# User Management Table
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Опис
 
-## Available Scripts
+Цей проект реалізує таблицю управління користувачами, яка дозволяє вам переглядати та фільтрувати список користувачів, отриманих з API. Таблиця відображає такі поля: ім'я, ім'я користувача, електронна пошта та телефон. Ви можете використовувати поля фільтрації для швидкого пошуку користувачів за цими атрибутами.
 
-In the project directory, you can run:
+## Функціональні можливості
 
-### `npm start`
+- **Відображення користувачів**: Всі користувачі відображаються у таблиці з їх іменем, ім'ям користувача, електронною поштою та телефоном.
+- **Фільтрація**: Ви можете фільтрувати користувачів за кожним з чотирьох полів (ім'я, ім'я користувача, email, телефон). Введення тексту в будь-яке з полів автоматично оновлює список відображених користувачів у реальному часі.
+- **Адаптивний дизайн**: Таблиця має зручний та привабливий дизайн, який легко використовувати на будь-якому пристрої.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Як користуватись
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. **Встановлення та запуск**:
+   - Клонувати цей репозиторій:
+     ```bash
+     git clone <URL>
+     ```
+   - Перейти в директорію проекту:
+     ```bash
+     cd user-management-app
+     ```
+   - Встановити залежності:
+     ```bash
+     npm install
+     ```
+   - Запустити проект:
+     ```bash
+     npm start
+     ```
+   - Перейти в браузері за адресою: `http://localhost:3000`
 
-### `npm test`
+2. **Використання таблиці**:
+   - Після завантаження сторінки ви побачите таблицю користувачів.
+   - У верхній частині кожного стовпця є поле введення, яке дозволяє фільтрувати користувачів за відповідним атрибутом.
+   - Введіть текст у будь-яке з полів (ім'я, ім'я користувача, email, телефон) для фільтрації списку користувачів. Таблиця автоматично оновлюється у режимі реального часу.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Технічні деталі
 
-### `npm run build`
+Проект створений з використанням наступних технологій:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: Бібліотека для створення користувацького інтерфейсу.
+- **Redux Toolkit**: Інструментарій для управління станом додатку.
+- **TypeScript**: Мова програмування, що надає можливість додавання статичної типізації до JavaScript.
+- **Axios**: Бібліотека для виконання HTTP-запитів до API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Структура проекту
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **src/components/UserTable.tsx**: Компонент таблиці, який відповідає за відображення та фільтрацію користувачів.
+- **src/store/userSlice.ts**: Redux slice для управління станом користувачів та фільтрів.
+- **src/App.tsx**: Головний компонент додатку.
+- **src/index.tsx**: Точка входу в додаток.
 
-### `npm run eject`
+## Поширені питання
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Що робити, якщо користувачі не завантажуються?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Якщо користувачі не завантажуються, перевірте наступні моменти:
+- Переконайтеся, що ви підключені до Інтернету.
+- Перевірте консоль розробника на наявність помилок.
+- Спробуйте оновити сторінку.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Як додати нові поля до таблиці?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Щоб додати нові поля до таблиці:
+- Оновіть інтерфейс `User` у файлі `userSlice.ts`.
+- Додайте нові поля у компонент `UserTable.tsx`.
+- Створіть нові поля фільтрації в компоненті та оновіть логіку фільтрації.
 
-## Learn More
+## Контакти
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Якщо у вас є питання або пропозиції, будь ласка, зв'яжіться зі мною за адресою [ваша електронна пошта].
 
-To learn React, check out the [React documentation](https://reactjs.org/).
